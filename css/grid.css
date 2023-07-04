@@ -1,0 +1,102 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+
+body {
+    height: 100vh; /*alto total de la ventana*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cabecera, .navbar, .seccion, .seccion2, .articulo, .pie { 
+    padding: 15px;
+    border: 1px solid;
+
+}
+
+
+
+.grid{ 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*pongo REPEAT en vez de ponerlo 3 veces 200px o las tantas veces que sean*/
+    /*medida especifica para las grids:unidades fraccionarias,cada uno va respetar 1fraccion:una fraccion de la pantalla*/
+    grid-template-rows: 140px 40px repeat(2, 260px) 80px ;
+    row-gap: 20px;
+    column-gap: 10px;
+    grid-template-areas:
+    "cabecera cabecera cabecera" 
+    "navbar navbar navbar"
+    "seccion articulo articulo"
+    "seccion2 seccion2 seccion2"
+    "pie pie pie"
+    ;
+}
+
+.cabecera{ 
+    grid-area: cabecera;
+    /*grid-column-start: 2; donde empieza*/ /*grid-column-end: 3; donde termina */
+}
+.navbar{ 
+    grid-area: navbar;
+   /*grid-column-start: 1;*/
+}
+
+.navbar ul{
+    display: flex; 
+    justify-content: space-evenly;
+
+}
+
+.seccion{ 
+    grid-area: seccion;
+}
+.articulo{ 
+    grid-area: articulo;
+}
+.seccion2{ 
+    grid-area: seccion2;
+}
+
+.pie{ 
+    grid-area: pie;
+}
+
+/*MEDIA QUERIES*/
+
+@media (min-width:600px) and (max-width:768px) {
+    .navbar ul { 
+        justify-content: space-around ;
+        /*background-color: purple;*/  
+    } 
+    .navbar ul li {
+        text-transform: uppercase; /*en esa medida el navbar se pone en mayuscula*/
+    }
+}
+@media screen and (max-width:360px) {   /*me pone el header azul*/
+    .cabecera {
+        background-color: cornflowerblue;
+    }
+    
+    .grid {
+    grid-template-rows: 140px 40px repeat(3, 260px) 80px ; /*en el repeat agregue otra fila para que se pueda acomodar abajo*/
+    grid-template-areas:
+    "cabecera cabecera cabecera" 
+    "navbar navbar navbar"
+    "articulo articulo articulo"
+    "seccion seccion seccion"
+    "seccion2 seccion2 seccion2"
+    "pie pie pie"
+    ;
+    }
+
+}
+

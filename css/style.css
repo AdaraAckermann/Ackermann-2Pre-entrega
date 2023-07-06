@@ -240,23 +240,27 @@ footer a:hover {
 
 /*galeria imagenes*/
 
-.grid {
-  display: grid;
-  grid-template-rows: repeat(5, 200px);
-  grid-template-columns: auto;
+.grido {
+  display: flex;
   justify-content: center;
-  grid-gap: 10px;
-  padding: 20px;
-}
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
 
-.grid img {
-  width: 200px;
-  height: 200px;
+}
+.grido div{
+  display: flex;
+  gap: 10px;
+}
+.grido img {
+  width: 100%;
+  max-height: 200px;
   object-fit: cover;
   transition: transform 0.3s ease;
+  display: inline-block;
 }
 
-.grid img:hover {
+.grido img:hover {
   transform: scale(1.5); /* Zoom al hacer hover */
 }
 

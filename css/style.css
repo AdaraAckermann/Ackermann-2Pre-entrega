@@ -41,6 +41,7 @@ nav.navbarra {
   background-color: #cfd89e;
   border-radius: 8px;
   list-style: none;
+  top: 0;
   margin: 0;
   padding: 0;
   z-index: 100;
@@ -72,7 +73,7 @@ nav.navbarra {
 
 
   
-  /*checkbox-menu de navbar*/
+  /*checkbox-menu de navbarra*/
   #checkbox-menu, label.menu{
     display: none;
   }
@@ -368,53 +369,54 @@ footer a:hover {
 
 
 /*seccion contacto*/
-.form-container{ 
-  width: 100%;
-  padding: 20px 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+
+.formu-container{ 
+  padding: 30px 10px;
+  /*display: inline;*/
+  /*flex-direction: column;*/
+  /*align-items: center;*/
 }
 
-.form-contacto{ 
-  width: 500px;
-  max-width: 550px;
-  margin-top: 20px;
-  border-radius: 9px;
+.formu-contacto{ 
+  /*width: 500px;*/
+  /*estaba max-width: 550px; */
+  /*margin-top: 15px;*/
+  border-radius: 5px;
   border: 1px solid #333;
   box-shadow: 5px 5px 8px #575656;
   /*  padding: 30px;*/
 }
 
-.form-box{ 
+.formu-box{ 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   background-color: rgb(240, 237, 234);
-  padding: 20px;
+  padding: 17px;
 }
 
-.form-box label{
-  width: 120px;
+.formu-box label{
+  width: 130px;
 }
 
-.form-box input, .form-box textarea{
+.formu-box input, .formu-box textarea{
   width: 70%;
-  height: 22px;
+  height: 24px;
   padding: 3px 5px;
   font-size: 12px;
 }
-.form-box textarea{  
+.formu-box textarea{  
   height: 200px; /*text area mas alto*/
   min-height: 150px;
   max-height: 300px;
   resize: vertical;
-}
+} 
 
 
 /*seccion contacto*/
 /*pseudoclases*/
-.form-box input:focus, .form-box textarea:focus{ 
+.formu-box input:focus, .formu-box textarea:focus{ 
   background-color: rgb(228, 238, 191);
   /*o border-radius:13px;*/
 }
@@ -426,10 +428,10 @@ footer a:hover {
 */
 
 
-.form-box:nth-child(odd){ 
+.formu-box:nth-child(odd){ 
   background-color: rgba(112, 112, 112, 0.267);
 }
-.form-box:nth-child(even){ 
+.formu-box:nth-child(even){ 
   background-color: rgba(230, 43, 43, 0.267);
 }
 
@@ -441,9 +443,16 @@ footer a:hover {
 .buttom-red{ 
   background-color: rgb(241, 146, 146);
 }
-div.maps{ 
-  padding-top: 40px;
-}
+
+
+/*@media (max-width: 360px) {
+  iframe{
+    display: inline;
+    width: 100%;
+    height: 250px ;
+
+  }
+}*/
 
 
 
@@ -453,10 +462,11 @@ div.maps{
 
 @media screen and (max-width:600px) {
   .navbarra ul{
-    display: none;
+    background-color: rgba(117, 177, 109, 0.952);
+    padding-right: 20px ;
+    display: none;   /*tenia none*/
     flex-direction: column;
-    position: absolute;
-    background-color: rgba(121, 223, 155, 0.87);
+    position: absolute; /*tenia absolute*/
   }
 
   label.menu{ 

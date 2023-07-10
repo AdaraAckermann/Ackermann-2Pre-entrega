@@ -31,10 +31,7 @@ header.portada{
   }
 
 
-
-
 /*barra de menu*/
-
 nav.navbarra {
   position: sticky;
   top: 0;
@@ -69,16 +66,13 @@ nav.navbarra {
   background-color: #ecb9b9a2;
 }
 
- 
-
-
   
-  /*checkbox-menu de navbarra*/
-  #checkbox-menu, label.menu{
+/*checkbox-menu de navbarra*/
+ #checkbox-menu, label.menu{
     display: none;
   }
 
-  label.menu{ 
+label.menu{ 
     font-size: 26px;
     color: rgb(252, 250, 248);
     cursor: pointer;
@@ -112,17 +106,6 @@ nav.navbarra {
 
 }
 
-@media (max-width: 768px) {
-  .relleno1 {
-    display: flex;
-  }
-  .relleno1 iframe, .relleno1 img {
-    height: 300px;
-    width: 400px;
-  }
-}
-
-
 
 
 
@@ -135,7 +118,6 @@ section.extra{
 
 
 /*3 fotos del index*/
-
 .charlotte {
   display: grid;
   grid-template-rows: 300px;
@@ -149,24 +131,6 @@ section.extra{
   height: 280px;
   object-fit: cover;
 }
-
-@media (max-width: 768px) {
-  .charlotte {
-    grid-template-rows: auto;
-    grid-template-columns: auto;
-    grid-gap: 5px;
-    justify-content: center;
-  }
-
-  .charlotte img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-}
-
-
-
 
 
 
@@ -236,9 +200,6 @@ footer a:hover {
 
 
 
-
-
-
 /*galeria imagenes*/
 
 .grido {
@@ -267,11 +228,7 @@ footer a:hover {
 
 
 
-
-
-
 /* Tabla en la sección de clasificación */
-
 .tabla{
   border: 1px solid rgb(245, 184, 92);
   border-radius: 5px;
@@ -289,11 +246,7 @@ footer a:hover {
 
 
 
-
-
 /*seccion curiosidades y mitos INICIO*/
-
-
 .mitos {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -306,21 +259,6 @@ footer a:hover {
 
 .duda img {
   width: 100%;
-}
-
-@media (max-width: 600px) {
-  .mitos {
-    grid-template-columns: 1fr;
-  }
-  
-  .duda {
-    grid-column: 1;
-  }
-  
-  .lista {
-    grid-column: 1;
-    grid-row: 2;
-  }
 }
 
 
@@ -360,16 +298,9 @@ footer a:hover {
   margin-top: 0;
 }
 
-@media (max-width: 768px) {
-  .contenedor-padre {
-    grid-template-columns: 1fr;
-  }
-}
-
 
 
 /*seccion contacto*/
-
 
 .formu-container{ 
   padding: 30px 10px;
@@ -458,7 +389,10 @@ footer a:hover {
 
 
 
-/*medias queries barra de navegacion*/
+
+/*MEDIAS QUERIES*/
+
+/*Barra de navegacion*/
 
 @media screen and (max-width:600px) {
   .navbarra ul{
@@ -481,4 +415,59 @@ footer a:hover {
 }
 
 
+/*index video y foto:class relleno1*/
+@media (max-width: 768px) {
+  .relleno1 {
+    display: flex;
+  }
+  .relleno1 iframe, .relleno1 img {
+    height: 300px;
+    width: 400px;
+  }
+}
+
+
+/*3 fotos del index: class charlotte*/
+@media (max-width: 768px) {
+  .charlotte {
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-gap: 5px;
+    justify-content: center;
+  }
+
+  .charlotte img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+
+
+
+/*seccion curiosidades y mitos INICIO*/
+@media (max-width: 600px) {
+  .mitos {
+    grid-template-columns: 1fr;
+  }
+  
+  .duda {
+    grid-column: 1;
+  }
+  
+  .lista {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+
+
+/*seccion TOP 5 de curiosidades y mitos*/
+@media (max-width: 768px) {
+  .contenedor-padre {
+    grid-template-columns: 1fr;
+  }
+}
 

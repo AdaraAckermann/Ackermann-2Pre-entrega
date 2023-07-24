@@ -1,0 +1,125 @@
+/* Media queries para dispositivos móviles */
+@media screen and (max-width: 767px) {
+  /* Header */
+  header.portada {
+    height: 180px;
+
+    .spider {
+      font-size: 50px;
+    }
+  }
+
+  /*Barra de navegacion*/
+  @media screen and (max-width:600px) {
+    nav.navbarra ul{
+      background-color: rgba(117, 177, 109, 0.952);
+      padding-right: 20px ;
+      display: none;  
+      flex-direction: column;
+      position: absolute; 
+    }
+  
+    label.menu{ 
+      display: block;
+      margin-left: 10px;
+    }
+  
+    #checkbox-menu:checked ~ ul { 
+      display: block;
+    }
+  
+  }
+
+  /*index video y foto:class relleno1*/
+  @media (max-width: 768px) {
+    .relleno1 {
+      display: flex;
+    }
+    .relleno1 iframe, .relleno1 img {
+      height: 260px;
+      width: 300px;
+    }
+  }
+
+
+  /* Mini texto */
+  section.minitexto {
+    font-size: 15px;
+    width: 80%;
+  }
+
+  /* Charlotte grid */
+  .charlotte {
+    grid-template-columns: $imagen-tamanio;
+  }
+
+  /* Footer */
+  footer {
+    .container {
+      div {
+        width: 100%;
+      }
+    }
+
+    .social-icons {
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+
+/*seccion curiosidades y mitos INICIO*/
+@media (max-width: 600px) {
+  .mitos {
+    grid-template-columns: 1fr;
+  }
+  
+  .duda {
+    grid-column: 1;
+  }
+  
+  .lista {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+
+
+/*seccion TOP 5 de curiosidades y mitos*/
+@media (max-width: 768px) {
+  .contenedor-padre {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/*CLASIFICACION*/
+/*CLASIFICACION: tabla,para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .tabla {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 6px;
+  }
+
+  /*Mostrar los datos en filas */
+  tr {
+    border-bottom: 1px solid #c7c5c5;
+    margin-bottom: 5px;
+  }
+
+  td:before {
+    /*Agregue el encabezado de la columna como contenido del pseudo-elemento */
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+  }
+}
+
+

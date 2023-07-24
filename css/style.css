@@ -1,35 +1,31 @@
-
-
-/*aplique foto de portada*/
-header.portada{
-    /*background-color: gray; para ponerle color al fondo del titulo*/
-        width: 100%;
-        height: 250px;
-        background-image: url('../media/portada.jpg'); /*imagen de fondo*/
-        background-position: center; /*para centrar la imagen*/
-        background-repeat: no-repeat; /*para que no se repita de a cuadros*/
-        background-size: cover;
- }
-
-
-/*titulo*/
-.spider{
+@charset "UTF-8";
+/*Variables*/
+/*barra de manu*/
+/*Tamaño de las imágenes de la sección Charlotte*/
+/*Tamanio de imagenes*/
+header.portada {
+  width: 100%;
+  height: 250px;
+  background-image: url("../media/portada.jpg"); /*imagen de fondo*/
+  background-position: center; /*para centrar la imagen*/
+  background-repeat: no-repeat; /*para que no se repita de a cuadros*/
+  background-size: cover;
+  /*titulo*/
+  /*web en naranja*/
+}
+header.portada .spider {
   font-size: 70px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+header.portada .yellow {
+  color: rgb(211, 112, 20);
 }
 
-/*web en naranja*/
- .yellow{
-    color: rgba(211,112,20);
- }
-
- /*Demas titulos en color*/
- .titulos-color{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+/*Demas titulos en color*/
+.titulos-color {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #d1740b;
-
-  }
-
+}
 
 /*barra de menu*/
 nav.navbarra {
@@ -43,138 +39,138 @@ nav.navbarra {
   padding: 0;
   z-index: 100;
 }
-
-.navbarra ul {
-  display:flex;
+nav.navbarra ul {
+  display: flex;
   align-items: center;
   justify-content: space-around;
 }
-
-.navbarra ul li {
+nav.navbarra ul li {
   padding: 10px;
   margin: 5px;
   background-color: none;
   list-style: none; /*saca los puntos tipicos de listas*/
 }
-
-.navbarra ul li a { 
+nav.navbarra ul li a {
   color: #333;
   text-decoration: none;
 }
-
-.navbarra ul li:hover {  /*le aplique al boton*/
-  background-color: #ecb9b9a2;
+nav.navbarra ul li:hover {
+  background-color: rgba(236, 185, 185, 0.6352941176);
 }
 
-  
 /*checkbox-menu de navbarra*/
- #checkbox-menu, label.menu{
-    display: none;
-  }
+#checkbox-menu, label.menu {
+  display: none;
+}
 
-label.menu{ 
-    font-size: 26px;
-    color: rgb(252, 250, 248);
-    cursor: pointer;
-  }
-  
+label.menu {
+  font-size: 26px;
+  color: rgb(252, 250, 248);
+  cursor: pointer;
+}
 
+.breadcrumb {
+  background-color: #f5f5f5;
+  padding: 8px;
+  border-radius: 4px;
+  list-style: none;
+}
 
+.breadcrumb-item {
+  display: inline;
+}
+
+.breadcrumb-item::after {
+  content: "›";
+  padding: 0 5px;
+  color: #888;
+}
+
+.breadcrumb-item:last-child::after {
+  content: none;
+}
+
+.breadcrumb-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
 
 /*index texto video y foto*/
-.relleno1, .relleno2{ 
+.relleno1, .relleno2 {
   padding: 25px;
-}
-
-
-/*index video y foto*/
-
-.relleno1 {
   display: flex;
   flex-direction: column;
 }
-.relleno1 div {
+.relleno1 div, .relleno2 div {
   margin-bottom: 20px;
 }
-.relleno1 iframe {
+.relleno1 iframe, .relleno2 iframe {
   width: 49%;
   height: 380px;
 }
-.relleno1 img{ 
+.relleno1 img, .relleno2 img {
   width: 49%;
   height: 350px;
-
 }
-
-
-
 
 /*te podria interesar*/
-section.extra{ 
+section.extra {
   border-style: groove;
   padding: 25px;
-
 }
 
-
-/*3 fotos del index*/
+/* 3 fotos del index */
+/* Variables*/
 .charlotte {
   display: grid;
-  grid-template-rows: 300px;
-  grid-template-columns: repeat(3, 280px);
+  grid-template-rows: 260px;
+  grid-template-columns: repeat(3, 260px);
   justify-content: center;
   grid-gap: 10px;
 }
-
 .charlotte img {
-  width: 280px;
-  height: 280px;
+  width: 260px;
+  height: 260px;
   object-fit: cover;
 }
 
-
-
-  /*cuadrito amarillo index*/
-section.minitexto{
+/*cuadrito amarillo index*/
+section.minitexto {
   border: 6px solid rgb(226, 241, 83);
   padding: 20px;
   font-size: 17px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
   background-color: rgba(241, 182, 127, 0.637);
   width: 250px;
   height: 250px;
   /* solución */
-  overflow:auto;
+  overflow: auto;
   margin: 20px;
   border-radius: 8px;
   float: right;
-
 }
 
-  
-  
-/*footer index*/
+/* footer */
 footer {
-    background-color: #b8eea7dc;
-    padding: 15px;
-    text-align: center;
-    color: #555;
-  
-  }
-  
-footer a{ 
-    color: #333;
-  }
-
+  background-color: rgba(184, 238, 167, 0.862745098);
+  padding: 15px;
+  text-align: center;
+  color: #555;
+}
+footer a {
+  color: #333;
+}
 
 .container {
-    max-width: 960px;
-    margin: 0px auto;
-    
-  }
-
-.container a { 
+  max-width: 960px;
+  margin: 0px auto;
+}
+.container a {
   text-decoration: none;
 }
 
@@ -183,68 +179,64 @@ footer a:hover {
   color: #d37925;
 }
 
-/*icons*/
-
+/* icons*/
 .social-icons a {
   display: inline-block;
-  margin: 5px ;
+  margin: 5px;
   padding: 10px;
   text-decoration: none;
   color: #555;
 }
-
 .social-icons i {
   font-size: 30px;
 }
 
-
-
-
 /*galeria imagenes*/
-
 .grido {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   padding: 10px;
-
 }
-.grido div{
+.grido div {
   display: flex;
   gap: 10px;
 }
 .grido img {
-  width: 100%;
-  max-height: 200px;
+  width: 300px;
+  height: 250px;
   object-fit: cover;
   transition: transform 0.3s ease;
   display: inline-block;
 }
-
 .grido img:hover {
   transform: scale(1.5); /* Zoom al hacer hover */
 }
 
-
-
 /* Tabla en la sección de clasificación */
-.tabla{
+.tabla {
   border: 1px solid rgb(245, 184, 92);
   border-radius: 5px;
-  width: 100%;
-  margin-top: 10px;
-  padding: 8px;
+  width: 97%;
+  padding: 10px;
+  overflow-x: auto; /* Agregar desplazamiento horizontal en dispositivos móviles */
+  border-collapse: collapse;
+  margin-left: 15px;
+  margin-top: 50px;
 }
 
 /* Estilo para las celdas de la tabla */
-
-.b{
+th, td {
+  border: 1px solid #d1d3d1;
   padding: 8px;
-  background-color: #c6ce7f;
+  text-align: center;
 }
 
-
+th {
+  background-color: rgba(196, 226, 247, 0.7882352941);
+  font-weight: bold;
+}
 
 /*seccion curiosidades y mitos INICIO*/
 .mitos {
@@ -261,22 +253,21 @@ footer a:hover {
   width: 100%;
 }
 
-
-
 /*seccion CUADRO de curiosidades y mitos*/
-.curiosidades{ 
+.curiosidades {
+  margin: 30px;
   background-color: rgba(166, 220, 230, 0.541);
   border: 5px solid #d4ab7b;
   padding: 10px;
   text-align: center;
   border-style: double;
-  
 }
 
-
+.duda:hover {
+  transform: rotate(5deg) scale(1.05);
+}
 
 /*seccion TOP 5 de curiosidades y mitos*/
-
 .contenedor-padre {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -284,7 +275,7 @@ footer a:hover {
 }
 
 .contenedor-hijo {
-  background-color: #c0bbb1b2;
+  background-color: rgba(192, 187, 177, 0.6980392157);
   padding: 20px;
   border: double solid rgb(10, 10, 10);
   margin: 20px;
@@ -298,28 +289,18 @@ footer a:hover {
   margin-top: 0;
 }
 
-
-
 /*seccion contacto*/
-
-.formu-container{ 
+.formu-container {
   padding: 30px 10px;
-  /*display: inline;*/
-  /*flex-direction: column;*/
-  /*align-items: center;*/
 }
 
-.formu-contacto{ 
-  /*width: 500px;*/
-  /*estaba max-width: 550px; */
-  /*margin-top: 15px;*/
+.formu-contacto {
   border-radius: 5px;
   border: 1px solid #333;
   box-shadow: 5px 5px 8px #575656;
-  /*  padding: 30px;*/
 }
 
-.formu-box{ 
+.formu-box {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -327,27 +308,27 @@ footer a:hover {
   padding: 17px;
 }
 
-.formu-box label{
+.formu-box label {
   width: 130px;
 }
 
-.formu-box input, .formu-box textarea{
+.formu-box input, .formu-box textarea {
   width: 70%;
   height: 24px;
   padding: 3px 5px;
   font-size: 12px;
 }
-.formu-box textarea{  
+
+.formu-box textarea {
   height: 200px; /*text area mas alto*/
   min-height: 150px;
   max-height: 300px;
   resize: vertical;
-} 
-
+}
 
 /*seccion contacto*/
 /*pseudoclases*/
-.formu-box input:focus, .formu-box textarea:focus{ 
+.formu-box input:focus, .formu-box textarea:focus {
   background-color: rgb(228, 238, 191);
   /*o border-radius:13px;*/
 }
@@ -357,117 +338,116 @@ footer a:hover {
   font-size: 1.8rem;
 }  
 */
-
-
-.formu-box:nth-child(odd){ 
+.formu-box:nth-child(odd) {
   background-color: rgba(112, 112, 112, 0.267);
 }
-.formu-box:nth-child(even){ 
+
+.formu-box:nth-child(even) {
   background-color: rgba(230, 43, 43, 0.267);
 }
 
-
-.buttom-green{ 
+.buttom-green {
   background-color: rgb(183, 238, 183);
 }
 
-.buttom-red{ 
+.buttom-red {
   background-color: rgb(241, 146, 146);
 }
 
-
-/*@media (max-width: 360px) {
-  iframe{
-    display: inline;
-    width: 100%;
-    height: 250px ;
-
+/* Media queries para dispositivos móviles */
+@media screen and (max-width: 767px) {
+  /* Header */
+  header.portada {
+    height: 180px;
   }
-}*/
-
-
-
-
-
-
-/*MEDIAS QUERIES*/
-
-/*Barra de navegacion*/
-
-@media screen and (max-width:600px) {
-  .navbarra ul{
+  header.portada .spider {
+    font-size: 50px;
+  }
+  /*Barra de navegacion*/
+  /*index video y foto:class relleno1*/
+  /* Mini texto */
+  /* Charlotte grid */
+  /* Footer */
+}
+@media screen and (max-width: 767px) and (max-width: 600px) {
+  nav.navbarra ul {
     background-color: rgba(117, 177, 109, 0.952);
-    padding-right: 20px ;
-    display: none;  
+    padding-right: 20px;
+    display: none;
     flex-direction: column;
-    position: absolute; 
+    position: absolute;
   }
-
-  label.menu{ 
+  label.menu {
     display: block;
     margin-left: 10px;
   }
-
-  #checkbox-menu:checked ~ ul { 
+  #checkbox-menu:checked ~ ul {
     display: block;
   }
-
 }
-
-
-/*index video y foto:class relleno1*/
-@media (max-width: 768px) {
+@media screen and (max-width: 767px) and (max-width: 768px) {
   .relleno1 {
     display: flex;
   }
   .relleno1 iframe, .relleno1 img {
-    height: 300px;
-    width: 400px;
+    height: 260px;
+    width: 300px;
   }
 }
-
-
-/*3 fotos del index: class charlotte*/
-@media (max-width: 768px) {
+@media screen and (max-width: 767px) {
+  section.minitexto {
+    font-size: 15px;
+    width: 80%;
+  }
   .charlotte {
-    grid-template-rows: auto;
-    grid-template-columns: auto;
-    grid-gap: 5px;
-    justify-content: center;
+    grid-template-columns: 260px;
   }
-
-  .charlotte img {
+  footer .container div {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+  }
+  footer .social-icons i {
+    font-size: 20px;
   }
 }
-
-
-
-
 /*seccion curiosidades y mitos INICIO*/
 @media (max-width: 600px) {
   .mitos {
     grid-template-columns: 1fr;
   }
-  
   .duda {
     grid-column: 1;
   }
-  
   .lista {
     grid-column: 1;
     grid-row: 2;
   }
 }
-
-
-
 /*seccion TOP 5 de curiosidades y mitos*/
 @media (max-width: 768px) {
   .contenedor-padre {
     grid-template-columns: 1fr;
   }
 }
+/*CLASIFICACION*/
+/*CLASIFICACION: tabla,para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .tabla {
+    font-size: 12px;
+  }
+  th, td {
+    padding: 6px;
+  }
+  /*Mostrar los datos en filas */
+  tr {
+    border-bottom: 1px solid #c7c5c5;
+    margin-bottom: 5px;
+  }
+  td:before {
+    /*Agregue el encabezado de la columna como contenido del pseudo-elemento */
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+  }
+}
 
+/*# sourceMappingURL=style.css.map */

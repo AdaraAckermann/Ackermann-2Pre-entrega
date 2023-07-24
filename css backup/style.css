@@ -1,0 +1,472 @@
+
+
+/*aplique foto de portada*/
+header.portada{
+    /*background-color: gray; para ponerle color al fondo del titulo*/
+        width: 100%;
+        height: 250px;
+        background-image: url('../media/portada.jpg'); /*imagen de fondo*/
+        background-position: center; /*para centrar la imagen*/
+        background-repeat: no-repeat; /*para que no se repita de a cuadros*/
+        background-size: cover;
+ }
+
+
+/*titulo*/
+.spider{
+  font-size: 70px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*web en naranja*/
+ .yellow{
+    color: rgba(211,112,20);
+ }
+
+ /*Demas titulos en color*/
+ .titulos-color{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #d1740b;
+
+  }
+
+
+/*barra de menu*/
+nav.navbarra {
+  position: sticky;
+  top: 0;
+  background-color: #cfd89e;
+  border-radius: 8px;
+  list-style: none;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+}
+
+.navbarra ul {
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbarra ul li {
+  padding: 10px;
+  margin: 5px;
+  background-color: none;
+  list-style: none; /*saca los puntos tipicos de listas*/
+}
+
+.navbarra ul li a { 
+  color: #333;
+  text-decoration: none;
+}
+
+.navbarra ul li:hover {  /*le aplique al boton*/
+  background-color: #ecb9b9a2;
+}
+
+  
+/*checkbox-menu de navbarra*/
+ #checkbox-menu, label.menu{
+    display: none;
+}
+
+label.menu{ 
+    font-size: 26px;
+    color: rgb(252, 250, 248);
+    cursor: pointer;
+}
+  
+
+
+/*index texto video y foto*/
+.relleno1, .relleno2{ 
+  padding: 25px;
+}
+
+
+/*index video y foto*/
+
+.relleno1 {
+  display: flex;
+  flex-direction: column;
+}
+.relleno1 div {
+  margin-bottom: 20px;
+}
+.relleno1 iframe {
+  width: 49%;
+  height: 380px;
+}
+.relleno1 img{ 
+  width: 49%;
+  height: 350px;
+
+}
+
+
+
+
+/*te podria interesar*/
+section.extra{ 
+  border-style: groove;
+  padding: 25px;
+
+}
+
+
+/*3 fotos del index*/
+.charlotte {
+  display: grid;
+  grid-template-rows: 300px;
+  grid-template-columns: repeat(3, 280px);
+  justify-content: center;
+  grid-gap: 10px;
+}
+
+.charlotte img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+}
+
+
+
+  /*cuadrito amarillo index*/
+section.minitexto{
+  border: 6px solid rgb(226, 241, 83);
+  padding: 20px;
+  font-size: 17px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  background-color: rgba(241, 182, 127, 0.637);
+  width: 250px;
+  height: 250px;
+  /* solución */
+  overflow:auto;
+  margin: 20px;
+  border-radius: 8px;
+  float: right;
+
+}
+
+  
+  
+/*footer index*/
+footer {
+    background-color: #b8eea7dc;
+    padding: 15px;
+    text-align: center;
+    color: #555;
+  
+  }
+  
+footer a{ 
+    color: #333;
+  }
+
+
+.container {
+    max-width: 960px;
+    margin: 0px auto;
+    
+  }
+
+.container a { 
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline; /*subrayado al pasar el cursor por encima */
+  color: #d37925;
+}
+
+/*icons*/
+
+.social-icons a {
+  display: inline-block;
+  margin: 5px ;
+  padding: 10px;
+  text-decoration: none;
+  color: #555;
+}
+
+.social-icons i {
+  font-size: 30px;
+}
+
+
+
+
+/*galeria imagenes*/
+
+.grido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+
+}
+.grido div{
+  display: flex;
+  gap: 10px;
+}
+.grido img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.grido img:hover {
+  transform: scale(1.5); /* Zoom al hacer hover */
+}
+
+
+
+/* Tabla en la sección de clasificación */
+.tabla{
+  border: 1px solid rgb(245, 184, 92);
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+}
+
+/* Estilo para las celdas de la tabla */
+
+.b{
+  padding: 8px;
+  background-color: #c6ce7f;
+}
+
+
+
+/*seccion curiosidades y mitos INICIO*/
+.mitos {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+}
+
+.lista {
+  grid-column: 1;
+}
+
+.duda img {
+  width: 100%;
+}
+
+
+
+/*seccion CUADRO de curiosidades y mitos*/
+.curiosidades{ 
+  background-color: rgba(166, 220, 230, 0.541);
+  border: 5px solid #d4ab7b;
+  padding: 10px;
+  text-align: center;
+  border-style: double;
+  
+}
+
+
+
+/*seccion TOP 5 de curiosidades y mitos*/
+
+.contenedor-padre {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.contenedor-hijo {
+  background-color: #c0bbb1b2;
+  padding: 20px;
+  border: double solid rgb(10, 10, 10);
+  margin: 20px;
+}
+
+.hijo-bueno {
+  background-color: #e9c583;
+}
+
+.contenedor-hijo h3 {
+  margin-top: 0;
+}
+
+
+
+/*seccion contacto*/
+
+.formu-container{ 
+  padding: 30px 10px;
+  /*display: inline;*/
+  /*flex-direction: column;*/
+  /*align-items: center;*/
+}
+
+.formu-contacto{ 
+  /*width: 500px;*/
+  /*estaba max-width: 550px; */
+  /*margin-top: 15px;*/
+  border-radius: 5px;
+  border: 1px solid #333;
+  box-shadow: 5px 5px 8px #575656;
+  /*  padding: 30px;*/
+}
+
+.formu-box{ 
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(240, 237, 234);
+  padding: 17px;
+}
+
+.formu-box label{
+  width: 130px;
+}
+
+.formu-box input, .formu-box textarea{
+  width: 70%;
+  height: 24px;
+  padding: 3px 5px;
+  font-size: 12px;
+}
+.formu-box textarea{  
+  height: 200px; /*text area mas alto*/
+  min-height: 150px;
+  max-height: 300px;
+  resize: vertical;
+} 
+
+
+/*seccion contacto*/
+/*pseudoclases*/
+.formu-box input:focus, .formu-box textarea:focus{ 
+  background-color: rgb(228, 238, 191);
+  /*o border-radius:13px;*/
+}
+
+/*
+ .form-box:nth-child(2) label{ 
+  font-size: 1.8rem;
+}  
+*/
+
+
+.formu-box:nth-child(odd){ 
+  background-color: rgba(112, 112, 112, 0.267);
+}
+.formu-box:nth-child(even){ 
+  background-color: rgba(230, 43, 43, 0.267);
+}
+
+
+.buttom-green{ 
+  background-color: rgb(183, 238, 183);
+}
+
+.buttom-red{ 
+  background-color: rgb(241, 146, 146);
+}
+
+
+/*@media (max-width: 360px) {
+  iframe{
+    display: inline;
+    width: 100%;
+    height: 250px ;
+
+  }
+}*/
+
+
+
+
+
+
+/*MEDIAS QUERIES*/
+
+/*Barra de navegacion*/
+
+@media screen and (max-width:600px) {
+  .navbarra ul{
+    background-color: rgba(117, 177, 109, 0.952);
+    padding-right: 20px ;
+    display: none;  
+    flex-direction: column;
+    position: absolute; 
+  }
+
+  label.menu{ 
+    display: block;
+    margin-left: 10px;
+  }
+
+  #checkbox-menu:checked ~ ul { 
+    display: block;
+  }
+
+}
+
+
+/*index video y foto:class relleno1*/
+@media (max-width: 768px) {
+  .relleno1 {
+    display: flex;
+  }
+  .relleno1 iframe, .relleno1 img {
+    height: 300px;
+    width: 400px;
+  }
+}
+
+
+/*3 fotos del index: class charlotte*/
+@media (max-width: 768px) {
+  .charlotte {
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-gap: 5px;
+    justify-content: center;
+  }
+
+  .charlotte img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+
+
+
+/*seccion curiosidades y mitos INICIO*/
+@media (max-width: 600px) {
+  .mitos {
+    grid-template-columns: 1fr;
+  }
+  
+  .duda {
+    grid-column: 1;
+  }
+  
+  .lista {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+
+
+/*seccion TOP 5 de curiosidades y mitos*/
+@media (max-width: 768px) {
+  .contenedor-padre {
+    grid-template-columns: 1fr;
+  }
+}
+

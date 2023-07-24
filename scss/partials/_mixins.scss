@@ -1,0 +1,6 @@
+/*Tamanio de imagenes*/
+@mixin size-img ($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+  }
+  

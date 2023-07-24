@@ -1,0 +1,407 @@
+@import "./partials/variables";
+@import "./partials/mixins";
+
+
+
+header.portada {
+  width: 100%;
+  height: 250px;
+  background-image: url('../media/portada.jpg'); /*imagen de fondo*/
+  background-position: center; /*para centrar la imagen*/
+  background-repeat: no-repeat; /*para que no se repita de a cuadros*/
+  background-size: cover;
+
+  /*titulo*/
+  .spider {
+    font-size: 70px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  /*web en naranja*/
+  .yellow{
+    color: rgba(211, 112, 20);
+  }
+}
+
+/*Demas titulos en color*/
+ .titulos-color{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #d1740b;
+}
+
+/*barra de menu*/
+
+nav.navbarra {
+  position: sticky;
+  top: 0;
+  background-color: $color-primary;
+  border-radius: 8px;
+  list-style: none;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+
+    li {
+      padding: 10px;
+      margin: 5px;
+      background-color: none;
+      list-style: none; /*saca los puntos tipicos de listas*/
+
+
+      a {
+        color: $color-secondary;
+        text-decoration: none;
+      }
+
+      &:hover {
+        background-color: $color-hover;
+      }
+    }
+  }
+  
+}
+/*checkbox-menu de navbarra*/
+#checkbox-menu, label.menu{
+  display: none;
+}
+
+label.menu{ 
+  font-size: 26px;
+  color: rgb(252, 250, 248);
+  cursor: pointer;
+}
+
+
+  .breadcrumb {
+    background-color: #f5f5f5;
+    padding: 8px;
+    border-radius: 4px;
+    list-style: none;
+  }
+
+  .breadcrumb-item {
+    display: inline;
+  }
+
+  .breadcrumb-item::after {
+    content: "›";
+    padding: 0 5px;
+    color: #888;
+  }
+
+  .breadcrumb-item:last-child::after {
+    content: none;
+  }
+
+  .breadcrumb-item a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .breadcrumb-item a:hover {
+    text-decoration: underline;
+  }
+
+/*index texto video y foto*/
+
+.relleno1, .relleno2 {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+
+  div {
+    margin-bottom: 20px;
+  }
+
+  iframe {
+    width: 49%;
+    height: 380px;
+  }
+
+  img {
+    width: 49%;
+    height: 350px;
+  }
+}
+
+/*te podria interesar*/
+section.extra{ 
+  border-style: groove;
+  padding: 25px;
+
+}
+
+/* 3 fotos del index */
+/* Variables*/
+
+.charlotte {
+  display: grid;
+  grid-template-rows: 260px;
+  grid-template-columns: repeat(3, $imagen-tamanio);
+  justify-content: center;
+  grid-gap: 10px;
+
+  img {
+    width: $imagen-tamanio;
+    height: $imagen-tamanio;
+    object-fit: cover;
+  
+  }
+}
+
+/*cuadrito amarillo index*/
+section.minitexto{
+  border: 6px solid rgb(226, 241, 83);
+  padding: 20px;
+  font-size: 17px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  background-color: rgba(241, 182, 127, 0.637);
+  width: 250px;
+  height: 250px;
+  /* solución */
+  overflow:auto;
+  margin: 20px;
+  border-radius: 8px;
+  float: right;
+}
+
+  
+
+/* footer */
+
+footer {
+  background-color: #b8eea7dc;
+  padding: 15px;
+  text-align: center;
+  color: #555;
+
+  a {
+    color: #333;
+  }
+}
+
+.container {
+  max-width: 960px;
+  margin: 0px auto;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+footer a:hover {
+  text-decoration: underline; /*subrayado al pasar el cursor por encima */
+  color: #d37925;
+}
+
+
+/* icons*/
+.social-icons {
+  a {
+    display: inline-block;
+    margin: 5px ;
+    padding: 10px;
+    text-decoration: none;
+    color: #555;
+  }
+
+  i {
+    font-size: 30px;
+  }
+}
+
+
+/*galeria imagenes*/
+.grido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+
+  div {
+    display: flex;
+    gap: 10px;
+  }
+
+  img {
+    @include size-img(300px,250px);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: inline-block;
+
+    &:hover {
+      transform: scale(1.5); /* Zoom al hacer hover */
+    }
+  }
+}
+
+
+
+
+/* Tabla en la sección de clasificación */
+.tabla{
+  border: 1px solid rgb(245, 184, 92);
+  border-radius: 5px;
+  width: 97%;
+  padding: 10px;
+  overflow-x: auto; /* Agregar desplazamiento horizontal en dispositivos móviles */
+  border-collapse: collapse;
+  margin-left: 15px;
+  margin-top: 50px;
+
+}
+
+/* Estilo para las celdas de la tabla */
+th, td {
+  border: 1px solid #d1d3d1;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #c4e2f7c9;
+  font-weight: bold;
+}
+
+
+
+/*seccion curiosidades y mitos INICIO*/
+.mitos {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+}
+
+.lista {
+  grid-column: 1;
+}
+
+.duda img {
+  width: 100%;
+}
+
+
+
+/*seccion CUADRO de curiosidades y mitos*/
+.curiosidades{ 
+  margin: 30px;
+  background-color: rgba(166, 220, 230, 0.541);
+  border: 5px solid #d4ab7b;
+  padding: 10px;
+  text-align: center;
+  border-style: double;
+}
+.duda:hover{
+    transform: rotate(5deg)scale(1.05);
+}
+
+
+/*seccion TOP 5 de curiosidades y mitos*/
+
+.contenedor-padre {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.contenedor-hijo {
+  background-color: #c0bbb1b2;
+  padding: 20px;
+  border: double solid rgb(10, 10, 10);
+  margin: 20px;
+}
+
+.hijo-bueno {
+  background-color: #e9c583;
+}
+
+.contenedor-hijo h3 {
+  margin-top: 0;
+}
+
+
+
+/*seccion contacto*/
+
+.formu-container{ 
+  padding: 30px 10px;
+}
+
+.formu-contacto{ 
+  border-radius: 5px;
+  border: 1px solid #333;
+  box-shadow: 5px 5px 8px #575656;
+}
+
+.formu-box{ 
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(240, 237, 234);
+  padding: 17px;
+}
+
+.formu-box label{
+  width: 130px;
+}
+
+.formu-box input, .formu-box textarea{
+  width: 70%;
+  height: 24px;
+  padding: 3px 5px;
+  font-size: 12px;
+}
+.formu-box textarea{  
+  height: 200px; /*text area mas alto*/
+  min-height: 150px;
+  max-height: 300px;
+  resize: vertical;
+} 
+
+
+/*seccion contacto*/
+/*pseudoclases*/
+.formu-box input:focus, .formu-box textarea:focus{ 
+  background-color: rgb(228, 238, 191);
+  /*o border-radius:13px;*/
+}
+
+/*
+ .form-box:nth-child(2) label{ 
+  font-size: 1.8rem;
+}  
+*/
+
+.formu-box:nth-child(odd){ 
+  background-color: rgba(112, 112, 112, 0.267);
+}
+.formu-box:nth-child(even){ 
+  background-color: rgba(230, 43, 43, 0.267);
+}
+
+
+.buttom-green{ 
+  background-color: rgb(183, 238, 183);
+}
+
+.buttom-red{ 
+  background-color: rgb(241, 146, 146);
+}
+
+
+
+
+
+
+@import "./partials/queries";
+

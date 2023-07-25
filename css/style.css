@@ -196,7 +196,7 @@ footer a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-wrap: wrap;
   padding: 10px;
 }
 .grido div {
@@ -220,7 +220,7 @@ footer a:hover {
   border-radius: 5px;
   width: 97%;
   padding: 10px;
-  overflow-x: auto; /* Agregar desplazamiento horizontal en dispositivos móviles */
+  overflow-x: auto; /* Agregue desplazamiento horizontal en dispositivos móviles */
   border-collapse: collapse;
   margin-left: 15px;
   margin-top: 50px;
@@ -265,6 +265,13 @@ th {
 
 .duda:hover {
   transform: rotate(5deg) scale(1.05);
+}
+
+.imagen-duda img {
+  max-width: 100%; /*para ajustar automat. a su tamaño máximo permitido*/
+  height: auto; /*para la relación de aspecto de la imagen */
+  display: block; /* Elimine el espacio adicional debajo de la imagen */
+  margin: 0 auto; /*Centre la imagen horizontalmente en el contenedor */
 }
 
 /*seccion TOP 5 de curiosidades y mitos*/
@@ -330,14 +337,8 @@ th {
 /*pseudoclases*/
 .formu-box input:focus, .formu-box textarea:focus {
   background-color: rgb(228, 238, 191);
-  /*o border-radius:13px;*/
 }
 
-/*
- .form-box:nth-child(2) label{ 
-  font-size: 1.8rem;
-}  
-*/
 .formu-box:nth-child(odd) {
   background-color: rgba(112, 112, 112, 0.267);
 }
@@ -447,6 +448,20 @@ th {
     content: attr(data-label);
     font-weight: bold;
     display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .grido {
+    flex-direction: column;
+    padding: 0;
+  }
+  div {
+    margin: 10px auto;
+  }
+  img {
+    width: 100%; /*img ocupan 100% del ancho del contenedor */
+    height: auto;
+    margin: 5px 20px;
   }
 }
 

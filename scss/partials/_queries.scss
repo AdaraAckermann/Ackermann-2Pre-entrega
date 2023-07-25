@@ -1,4 +1,5 @@
 /* Media queries para dispositivos móviles */
+
 @media screen and (max-width: 767px) {
   /* Header */
   header.portada {
@@ -124,18 +125,15 @@
 
 
 
-
+/*Galeria*/
 @media screen and (max-width: 768px) {
   .grido {
     flex-direction: column; 
     padding: 0; 
   }
 
-  div {
+  .img-galeria{
     margin: 10px auto; 
-  }
-
-  img {
     width: 100%; /*img ocupan 100% del ancho del contenedor */
     height: auto; 
     margin: 5px 20px; 

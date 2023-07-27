@@ -18,6 +18,13 @@
 
     <!--Bootstrap-->
     <link rel="stylesheet" href="./css/bootstrap.css"/>
+
+    <!--libreria:animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--libreria:AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    
     <!--Custom style-->
     <link rel="stylesheet" href="./css/style.css">
   </head>
@@ -25,7 +32,7 @@
   
   <body>
     <header class="portada">
-      <h1 class="spider">SPIDER<span class="yellow">WEB</span></h1>
+      <h1 class="spider animate__animated animate__fadeInDown">SPIDER<span class="yellow">WEB</span></h1>
       <p>Entre patas y telarañas</p>
     </header>
     
@@ -131,7 +138,7 @@
       
     <div class="container text-center cartas">
       <div class="row">
-        <div class="col">
+        <div class="col" data-aos="fade-up">
           <div class="card" style="width: 18rem;">
             <img src="./media/muchas.jpg" class="card-img-top" alt="Carta info">
             <div class="card-body">
@@ -142,7 +149,7 @@
           </div>
         </div>
           
-        <div class="col">
+        <div class="col" data-aos="fade-up">
           <div class="card" style="width: 18rem;">
             <img src="./media/duda.jpg" class="card-img-top" alt="carta info1">
             <div class="card-body">
@@ -153,7 +160,8 @@
           </div>
         </div>
           
-        <div class="col">
+        <div class="col" data-aos="fade-up"
+        data-aos-duration="3000">
           <div class="card" style="width: 18rem;">
             <img src="./media/top5 2.jpg" class="card-img-top" alt="Carta info2">
             <div class="card-body">
@@ -193,6 +201,12 @@
     <!--JavaScript-->
     <script src="./js/popper.js"></script>
     <script src="./js/bootstrap.js"></script>
+    <!--AOS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
       
   </body>
 </html>

@@ -10,14 +10,18 @@
     <meta name="keywords" content="arañas, arácnidos, clasificación arañas, mitos sobre arañas, curiosidades sobre arañas, arañas venenosas, fotos de arañas, tamaño de las arañas, peligros de las arañas, anatomía de las arañas, telarañas, depredadores, seda de araña, especies de arañas, hábitats de arañas, comportamiento de arañas, picaduras de arañas, solífugos, aracnología, caza de arañas, características de las arañas, venenos de arañas">
 
     
-
-    
     <!--Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!--Bootstrap-->
     <link rel="stylesheet" href="./css/bootstrap.css"/>
+
+    <!--libreria:animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--libreria:AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <!--Custom style-->
     <link rel="stylesheet" href="./css/style.css">
 
@@ -25,7 +29,7 @@
 
 <body>
     <header>
-        <h1 class="titulos-color">CURIOSIDADES Y MITOS</h1>
+        <h1 class="titulos-color animate__animated animate__fadeInDown">CURIOSIDADES Y MITOS</h1>
     </header>
     <section >
         <nav class="navbarra">
@@ -100,7 +104,7 @@
 
 <section class="contenedor-padre">
 
-    <div class="contenedor-hijo">
+    <div class="contenedor-hijo" data-aos="fade-right">
         <h3>1.Las arañas mas chiquitas</h3>
         <ol>
             <li>Lorem, ipsum dolor.</li>
@@ -111,7 +115,7 @@
         </ol>
     </div>
 
-    <div class="contenedor-hijo">
+    <div class="contenedor-hijo" data-aos="fade-left">
         <h3>2.Las arañas mas grandes</h3>
         <ol>
             <li>Lorem, ipsum dolor.</li>
@@ -123,7 +127,7 @@
 
     </div>
 
-    <div class="contenedor-hijo">
+    <div class="contenedor-hijo" data-aos="fade-up-right">
         <h3>3.Las arañas mas venenosas</h3>
         <ol>
             <li>Lorem, ipsum dolor.</li>
@@ -134,7 +138,7 @@
         </ol>
     </div>
 
-    <div class="contenedor-hijo hijo-bueno">
+    <div class="contenedor-hijo hijo-bueno" data-aos="fade-up-left">
         <h3>4.Las arañas mas raras</h3>
         <ol>
             <li>Lorem, ipsum dolor.</li>
@@ -145,7 +149,7 @@
         </ol>
     </div>
 
-    <div class="contenedor-hijo">
+    <div class="contenedor-hijo" data-aos="fade-right">
         <h3>5.Las arañas mas usuales</h3>
         <ol>
             <li>Lorem, ipsum dolor.</li>
@@ -156,7 +160,8 @@
         </ol>
     </div>
 
-    <div class="contenedor-hijo">
+    <div class="contenedor-hijo" data-aos="fade-up"
+    data-aos-duration="3000">
         <h3>6.Las arañas mas agresivas</h3>
         <ol>
             <li>Lorem, ipsum dolor.</li>
@@ -204,6 +209,11 @@
   <!--JavaScript-->
   <script src="./js/popper.js"></script>
   <script src="./js/bootstrap.js"></script>
+  <!--AOS-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 </html>

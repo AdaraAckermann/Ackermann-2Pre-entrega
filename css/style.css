@@ -3,6 +3,7 @@
 /*barra de manu*/
 /*Tamaño de las imágenes de la sección Charlotte*/
 /*Tamanio de imagenes*/
+/* Caracteristicas-styles de las portadas*/
 /* 
   $medidas:"default";
   @if($medidas !="360") {
@@ -36,6 +37,9 @@ header.portada .yellow {
 .titulos-color {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #d1740b;
+  font-size: 40px;
+  text-align: center;
+  padding: 30px;
 }
 
 /*barra de menu*/
@@ -191,10 +195,10 @@ footer a:hover {
 .portada-galeria {
   width: 100%;
   height: 250px;
-  background-image: url("../media/portada2.jpg"); /*imagen de fondo*/
-  background-position: center; /*para centrar la imagen*/
-  background-repeat: no-repeat; /*para que no se repita de a cuadros*/
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-image: url("../media/portada2.jpg"); /*imagen de fondo*/
 }
 
 .grido {
@@ -223,10 +227,10 @@ footer a:hover {
 .portada-clasificacion {
   width: 100%;
   height: 250px;
-  background-image: url("../media/arania en tela.jpg"); /*imagen de fondo*/
-  background-position: center; /*para centrar la imagen*/
-  background-repeat: no-repeat; /*para que no se repita de a cuadros*/
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-image: url("../media/arania en tela.jpg"); /*imagen de fondo*/
 }
 
 .tabla {
@@ -256,10 +260,10 @@ th {
 .portada-curiosidades {
   width: 100%;
   height: 250px;
-  background-image: url("../media/fondo.jpg"); /*imagen de fondo*/
-  background-position: center; /*para centrar la imagen*/
-  background-repeat: no-repeat; /*para que no se repita de a cuadros*/
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-image: url("../media/fondo.jpg"); /*imagen de fondo*/
 }
 
 .mitos {
@@ -323,10 +327,10 @@ th {
 .portada-contacto {
   width: 100%;
   height: 250px;
-  background-image: url("../media/portada3.jpg"); /*imagen de fondo*/
-  background-position: center; /*para centrar la imagen*/
-  background-repeat: no-repeat; /*para que no se repita de a cuadros*/
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-image: url("../media/portada3.jpg"); /*imagen de fondo*/
 }
 
 .formu-container {

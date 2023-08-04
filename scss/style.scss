@@ -28,6 +28,9 @@ header.portada {
  .titulos-color{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #d1740b;
+  font-size: 40px;
+  text-align: center;
+  padding: 30px;
 }
 
 /*barra de menu*/
@@ -210,14 +213,11 @@ footer a:hover {
 
 
 /*galeria imagenes*/
-.portada-galeria{
-  width: 100%;
-  height: 250px;
+.portada-galeria {
+  @include background-properties;
   background-image: url('../media/portada2.jpg'); /*imagen de fondo*/
-  background-position: center; /*para centrar la imagen*/
-  background-repeat: no-repeat; /*para que no se repita de a cuadros*/
-  background-size: cover;
 }
+
 .grido {
   display: flex;
   justify-content: center;
@@ -246,13 +246,10 @@ footer a:hover {
 
 
 /* Tabla en la sección de clasificación */
+
 .portada-clasificacion{
-  width: 100%;
-  height: 250px;
+  @include background-properties;
   background-image: url('../media/arania\ en\ tela.jpg'); /*imagen de fondo*/
-  background-position: center; /*para centrar la imagen*/
-  background-repeat: no-repeat; /*para que no se repita de a cuadros*/
-  background-size: cover;
 }
 
 .tabla{
@@ -282,12 +279,8 @@ th {
 
 /*seccion curiosidades y mitos: INICIO*/
 .portada-curiosidades{
-  width: 100%;
-  height: 250px;
+  @include background-properties;
   background-image: url('../media/fondo.jpg'); /*imagen de fondo*/
-  background-position: center; /*para centrar la imagen*/
-  background-repeat: no-repeat; /*para que no se repita de a cuadros*/
-  background-size: cover;
 }
 
 .mitos {
@@ -350,12 +343,8 @@ th {
 
 /*seccion contacto*/
 .portada-contacto{
-  width: 100%;
-  height: 250px;
+  @include background-properties;
   background-image: url('../media/portada3.jpg'); /*imagen de fondo*/
-  background-position: center; /*para centrar la imagen*/
-  background-repeat: no-repeat; /*para que no se repita de a cuadros*/
-  background-size: cover;
 }
 
 .formu-container{ 

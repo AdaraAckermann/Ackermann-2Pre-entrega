@@ -1,23 +1,23 @@
 /* Media queries para dispositivos móviles */
-
-@media screen and (max-width: 767px) {
-  /* Header */
-  header.portada {
-    height: 180px;
-
-    .spider {
-      font-size: 50px;
+ /*Header-portada*/
+  @media screen and (max-width: 767px) {
+    header.portada {
+      height: 180px;
+      .spider {
+        font-size: 50px;
+      }
     }
   }
-
   /*Barra de navegacion*/
   @media screen and (max-width:600px) {
     nav.navbarra ul{
-      background-color: rgba(117, 177, 109, 0.952);
+      background-color: rgba(219, 240, 216, 0.952);
       padding-right: 20px ;
       display: none;  
       flex-direction: column;
       position: absolute; 
+      box-shadow: 3px 3px 5px #575656;
+
     }
   
     label.menu{ 
@@ -35,24 +35,31 @@
   @media (max-width: 768px) {
     .relleno1 {
       display: flex;
+      font-size: small;
     }
     .relleno1 iframe, .relleno1 img {
-      height: 260px;
-      width: 300px;
+      height: 250px;
+      width: 340px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .relleno1 iframe, .relleno1 img {
+      height: 240px;
+      width: 310px;
     }
   }
 
 
   /* Mini texto */
-  section.minitexto {
-    font-size: 15px;
-    width: 80%;
+  @media screen and (max-width: 400px) {
+    section.minitexto {
+      font-size: 15px;
+      width: 80%;
+    }
   }
 
-  /* Charlotte grid */
-  .charlotte {
-    grid-template-columns: $imagen-tamanio;
-  }
+  
 
   /* Footer */
   footer {
@@ -68,7 +75,7 @@
       }
     }
   }
-}
+
 
 
 /*seccion curiosidades y mitos INICIO*/
@@ -87,6 +94,13 @@
   }
 }
 
+@media (min-width: 360px) and (max-width: 768px){
+  .curiosidades{
+    font-size: small;
+    padding: 10px;
+    margin-top: 50px;
+  }
+}
 
 
 /*seccion TOP 5 de curiosidades y mitos*/
@@ -125,18 +139,27 @@
 
 
 
-/*Galeria*/
-@media screen and (max-width: 768px) {
+/*Galeria:para diferentes tamaños de pantalla */
+/* Dispositivos móviles de 360px */
+@media (max-width: 400px) {
   .grido {
     flex-direction: column; 
     padding: 0; 
+    margin: 5px 10px;
   }
 
   .img-galeria{
     margin: 10px auto; 
     width: 100%; /*img ocupan 100% del ancho del contenedor */
     height: auto; 
-    margin: 5px 20px; 
+    
+  }
+}
+
+/* Tablets de 768px */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .grido div{
+    flex-basis: calc(33.33% - 20px); /* 3 columnas con espacio entre ellas */
   }
 }
 

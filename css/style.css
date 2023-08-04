@@ -4,24 +4,41 @@
 /*Tamaño de las imágenes de la sección Charlotte*/
 /*Tamanio de imagenes*/
 /* Caracteristicas-styles de las portadas*/
-/* 
-  $medidas:"default";
-  @if($medidas !="360") {
-    div.charlotte img{
-        width: 200px;
-        height: 200px;  
+/*galeria imagenes*/
+.grido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.grido div {
+  display: flex;
+  gap: 10px;
+}
+.grido img {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+.grido img:hover {
+  transform: scale(1.5); /* Zoom al hacer hover */
+}
 
-    }
-  }
-*/
-/*probar borrando justify-content en style.scssM*/
+/*seccion de curiosidades y mitos:foto signo de interrogacion*/
+.duda:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
 header.portada {
   width: 100%;
   height: 250px;
-  background-image: url("../media/portada.jpg"); /*imagen de fondo*/
-  background-position: center; /*para centrar la imagen*/
-  background-repeat: no-repeat; /*para que no se repita de a cuadros*/
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-image: url("../media/portada.jpg"); /*imagen de fondo portada*/
   /*titulo*/
   /*web en naranja*/
 }
@@ -271,17 +288,14 @@ th {
   grid-template-columns: 2fr 1fr;
   grid-gap: 20px;
 }
-
-.lista {
+.mitos .lista {
   grid-column: 1;
 }
-
-.duda img {
+.mitos .duda img {
   width: 75%;
   margin-left: 40px;
 }
-
-.duda:hover {
+.mitos .duda img:hover {
   transform: rotate(5deg) scale(1.05);
 }
 
@@ -307,20 +321,17 @@ th {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
-
-.contenedor-hijo {
+.contenedor-padre .contenedor-hijo {
   background-color: rgba(192, 187, 177, 0.6980392157);
   padding: 20px;
   border: double solid rgb(10, 10, 10);
   margin: 20px;
 }
-
-.hijo-bueno {
-  background-color: #e9c583;
-}
-
-.contenedor-hijo h3 {
+.contenedor-padre .contenedor-hijo h3 {
   margin-top: 0;
+}
+.contenedor-padre .hijo-bueno {
+  background-color: #e9c583;
 }
 
 /*seccion contacto*/
@@ -342,27 +353,23 @@ th {
   border: 1px solid #333;
   box-shadow: 5px 5px 8px #575656;
 }
-
-.formu-box {
+.formu-contacto .formu-box {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background-color: rgb(240, 237, 234);
   padding: 17px;
 }
-
-.formu-box label {
+.formu-contacto .formu-box label {
   width: 130px;
 }
-
-.formu-box input, .formu-box textarea {
+.formu-contacto .formu-box input, .formu-contacto .formu-box textarea {
   width: 70%;
   height: 24px;
   padding: 3px 5px;
   font-size: 12px;
 }
-
-.formu-box textarea {
+.formu-contacto .formu-box textarea {
   height: 200px; /*text area mas alto*/
   min-height: 150px;
   max-height: 300px;

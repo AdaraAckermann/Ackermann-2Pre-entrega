@@ -383,16 +383,20 @@ th {
   background-color: rgba(230, 43, 43, 0.267);
 }
 
-.buttom-green{ 
+/*estilos comunes de botones*/
+%button-style {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.buttom-green {
+  @extend %button-style;
   background-color: rgb(183, 238, 183);
 }
-
-.buttom-red{ 
+.buttom-red {
+  @extend %button-style;
   background-color: rgb(241, 146, 146);
 }
-
-
-
 
 
 

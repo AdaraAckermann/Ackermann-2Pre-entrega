@@ -390,6 +390,13 @@ th {
   background-color: rgba(230, 43, 43, 0.267);
 }
 
+/*estilos comunes de botones*/
+.buttom-red, .buttom-green {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
 .buttom-green {
   background-color: rgb(183, 238, 183);
 }

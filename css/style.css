@@ -264,7 +264,7 @@ footer a:hover {
 /* Estilo para las celdas de la tabla */
 th, td {
   border: 1px solid #d1d3d1;
-  padding: 8px;
+  padding: 5px;
   text-align: center;
 }
 
@@ -390,7 +390,7 @@ th {
   background-color: rgba(230, 43, 43, 0.267);
 }
 
-/*estilos comunes de botones*/
+/*Extend: estilos comunes de botones*/
 .buttom-red, .buttom-green {
   padding: 5px 10px;
   font-size: 14px;
